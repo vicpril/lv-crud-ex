@@ -8,6 +8,9 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
+  @if(Request::url() !== route('welcome'))
+    <a href="{{ route('welcome') }}">Homepage</a>
+  @endif
   <div class="container">
     @yield('content')
   </div>

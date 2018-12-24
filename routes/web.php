@@ -13,6 +13,15 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
+//Laravel 5.7 CRUD Example Tutorial For Beginners From Scratch
 Route::resource('shares', 'ShareController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Laravel File Upload Example Tutorial From Scratch
+Route::get('/home-file', 'HomeController@indexFile')->name('home-file');
+Route::post('file/upload', 'FileController@store')->name('file.upload');

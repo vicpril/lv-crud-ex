@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 <style>
@@ -13,7 +13,7 @@
     </div><br />
   @endif
   <div class="alert">
-    <a href="{{ route('shares.create') }}" class="btn btn-primary">Add new</a>
+    <a href="{{ route('shares.create') }}" class="btn btn-success">Add new</a>
   </div>
   <table class="table table-striped">
     <thead>
