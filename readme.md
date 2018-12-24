@@ -7,7 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Laravel 5.7 <a href="https://appdividend.com/2018/09/06/laravel-5-7-crud-example-tutorial/">CRUD Example Tutorial For Beginners</a>
+## Laravel 5.7 <br/>
+<a href="https://appdividend.com/2018/09/06/laravel-5-7-crud-example-tutorial/">CRUD Example Tutorial For Beginners</a><br/>
+<a href="https://appdividend.com/2018/08/15/laravel-file-upload-example/">Laravel File Upload Example Tutorial From Scratch</a>
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
