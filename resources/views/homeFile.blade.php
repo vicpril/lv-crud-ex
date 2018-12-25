@@ -4,11 +4,23 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            @if(session()->get('message'))
+            <div class="alert alert-success">
+              {{ session()->get('message') }}
+            </div>
+            @endif
             <div class="card">
                 <div class="card-header">File Upload</div>
                 <div class="card-body">
                 <form method="POST" action="{{ route('file.upload') }}" aria-label="{{ __('Upload') }}">
-                        @csrf
+                      @csrf
+                      <div class="form-group row ">
+                        <label for="title" class="col-sm-4 col-form-label text-md-right">{{ __('File Upload') }}</label>
+                        <div class="col-md-6">
+                          <div id="file" class="dropzone">
+                          </div>
+                        </div>    
+                      </div>
                         <div class="form-group row">
                             <label for="title" class="col-sm-4 col-form-label text-md-right">{{ __('Title') }}</label>
                             <div class="col-md-6">
@@ -57,3 +69,17 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+  <script>
+    var drop = new Dropzone('#file', {
+      createImageThumbnails: false,
+      addRemoveLinks: true,
+      url: "{{ route('upload') }}",
+      headers: {
+        'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
+      }
+    });
+  </script>
+@endsection
+

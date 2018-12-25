@@ -25,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Laravel File Upload Example Tutorial From Scratch
 Route::get('/home-file', 'HomeController@indexFile')->name('home-file');
 Route::post('file/upload', 'FileController@store')->name('file.upload');
+Route::post('upload', 'FileController@upload')->name('upload');
