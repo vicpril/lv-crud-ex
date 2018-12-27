@@ -72,14 +72,16 @@
 
 @section('scripts')
   <script>
-    var drop = new Dropzone('#file', {
-      createImageThumbnails: false,
-      addRemoveLinks: true,
-      url: "{{ route('upload') }}",
-      headers: {
-        'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
-      }
-    });
+    window.onload = function() {
+        var drop = new Dropzone('#file', {
+          createImageThumbnails: false,
+          addRemoveLinks: true,
+          url: "{{ route('upload') }}",
+          headers: {
+            'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
+          }
+        });
+    };
   </script>
 @endsection
 
