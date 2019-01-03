@@ -9,6 +9,19 @@
               {{ session()->get('message') }}
             </div>
             @endif
+            @if(auth()->user()->files()->count())
+            <div class="card">
+                <div class="card-header">{{auth()->user()->name}}'s files:</div>
+                <div class="card-body">
+                    <ul>
+                    @foreach(auth()->user()->files as $file)
+                        <li><a href="">{{$file->title}}</a></li>
+                    @endforeach
+                    </ul>
+                    {{ auth()->user()->files }}
+                </div>
+            </div>
+            @endif
             <div class="card">
                 <div class="card-header">File Upload</div>
                 <div class="card-body">

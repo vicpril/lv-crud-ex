@@ -30,11 +30,11 @@ class User extends Authenticatable
   
     public function files()
     {
-      $this->hasMany(File::class);
+      return $this->hasMany(File::class);
     }
   
     public function uploads()
     {
-      $this->hasMany(Upload::class);
+      return $this->hasMany(Upload::class);
     }
 }
