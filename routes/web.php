@@ -26,6 +26,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home-file', 'HomeController@indexFile')->name('home-file');
 Route::post('file/upload', 'FileController@store')->name('file.upload');
 Route::post('upload', 'FileController@upload')->name('upload');
-
-//Laravel Dropzone Image Upload Tutorial With Example
-Route::get('/home-file-dropzone', 'HomeController@indexFileDropzone')->name('home-file-dropzone');
