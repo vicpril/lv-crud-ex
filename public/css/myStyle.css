@@ -1,9 +1,16 @@
-
-#app{
-  height: 100%;
-  width:100%;
+/* html, body {
+  width: 100%; 
+  height: 100%; 
   
-  background-image: url('http://unsplash.it/1200x500');
+}
+
+#app {
+  
+  position: relative;
+  width: 100%;
+	height: 100%;
+  
+  background-image: url('/img/yosemite.jpg');
 
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +18,8 @@
   
 }
 
-main::before{
+#app::before{
+  content: '';
   position: absolute;
 	top: 0;
 	right: 0;
@@ -20,4 +28,4 @@ main::before{
 	background-image: linear-gradient(to bottom right,#012fa2,#dc4258);
 	opacity: .6; 
   
-}
+} */

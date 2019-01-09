@@ -9,7 +9,7 @@
 
     <title>
       {{ config('app.name', 'Laravel') }}
-      - @yeald('title')
+      - @yield('title')
   </title>
 
     <!-- Fonts -->
@@ -24,7 +24,6 @@
   
 </head>
 <body>
-    <div class="bg"></div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -78,12 +77,9 @@
         </nav>
 
         <main class="py-4">
-          
-          
             <div class="container">
               @yield('content')
             </div>
-          <div class="overlay"> 
           </div>
           
         </main>
