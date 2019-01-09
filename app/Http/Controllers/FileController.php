@@ -16,12 +16,6 @@ class FileController extends Controller
         'price' => 'required|numeric'
       ]);
 
-      // auth()->user()->files()->create([
-      //   'title' => $request->get('title'),
-      //   'overview' => $request->get('overview'),
-      //   'price' => $request->get('price')
-      // ]);
-
       auth()->user()->files()->create($request->only([
                                           'title', 
                                           'overview', 

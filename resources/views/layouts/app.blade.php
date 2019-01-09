@@ -7,20 +7,24 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    @yield('scripts')
+    <title>
+      {{ config('app.name', 'Laravel') }}
+      - @yeald('title')
+  </title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    @yield('fonts')
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/myStyle.css') }}" rel="stylesheet">
+    @yield('styles')
+  
 </head>
 <body>
+    <div class="bg"></div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -74,11 +78,21 @@
         </nav>
 
         <main class="py-4">
-          <div class="container">
-            @yield('content')
+          
+          
+            <div class="container">
+              @yield('content')
+            </div>
+          <div class="overlay"> 
           </div>
+          
         </main>
     </div>
+  
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+@yield('scripts')
 
 </body>
 </html>
+

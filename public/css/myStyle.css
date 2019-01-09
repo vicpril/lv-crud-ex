@@ -1,0 +1,23 @@
+
+#app{
+  height: 100%;
+  width:100%;
+  
+  background-image: url('http://unsplash.it/1200x500');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+main::before{
+  position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#012fa2,#dc4258);
+	opacity: .6; 
+  
+}

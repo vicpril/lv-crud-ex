@@ -23,12 +23,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('welcome');
     }
   
     //Laravel File Upload Example
     public function indexFile()
     {
         return view('homeFile');
+    }
+  
+    // Laravel Dropzone Image Upload Tutorial With Example
+    public function indexFileDropzone()
+    {
+      return view('imageupload');
     }
 }
